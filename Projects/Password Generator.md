@@ -68,6 +68,8 @@ class PasswordGenerator:
         print("Random Password Generator")
 
         length = int(input("Password Length: "))
+        if password < length:
+            print(f"Password is too short, should be at least {length} characters long.")
 
         use_uppercase = input("Use Uppercase Letters? (Y/N): ").lower() == "y"
         use_lowercase = input("Use Lowercase Letters? (Y/N): ").lower() == "y"

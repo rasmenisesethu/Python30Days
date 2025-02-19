@@ -57,6 +57,8 @@ class DictionaryApp:
             ''')
         self.conn.commit()
 
+        
+
     def add_word(self,word,meaning,sentence):
         self.cursor.execute("INSERT INTO words (word, meaning,sentence) VALUES ( ?, ?, ?)",(word,meaning,sentence))
         self.conn.commit()
